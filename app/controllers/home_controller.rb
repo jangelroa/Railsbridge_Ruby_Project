@@ -1,8 +1,8 @@
-class HomeController < ApplicationController
-  before_action :authenticate_user!
+class HomeController < AuthenticatedController
+
   def index
     if user_signed_in?
-      @message = "Welcome to my website! #{current_user.email}"
+      @message = "Welcome to my website!"
       @email = current_user.email
     else
       @message = "NOT signed in!"

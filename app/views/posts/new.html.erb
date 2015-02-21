@@ -1,0 +1,5 @@
+<%= form_for @post, url: {action: "create"}, html: {class: "create_post"} do |frm| %>
+  <p>Title: <%= frm.text_field :title %></p>
+  <p>Content: <%= frm.text_area :content, size: "60x12" %></p>
+  <%= frm.submit "Create Post" %>
+<% end %>
